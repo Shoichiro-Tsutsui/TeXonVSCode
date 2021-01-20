@@ -1,0 +1,65 @@
+\documentclass{ltjsarticle}
+\usepackage{luatexja}
+
+\usepackage{amsmath, amssymb, latexsym, physics, mathrsfs, bm}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage[svgnames]{xcolor}
+\usepackage[
+     colorlinks        = true,
+     unicode           = true,
+     pdfstartview      = FitV,
+     linktocpage       = true,
+     linkcolor         = OrangeRed,
+     citecolor         = MediumSeaGreen,
+     urlcolor          = RoyalBlue,
+     bookmarks         = true,
+     bookmarksnumbered = true,
+     pdftitle={いい感じのタイトル},
+     pdfauthor={筒井翔一朗}
+]{hyperref}
+
+
+\begin{document}
+\title{いい感じのタイトル}
+\author{筒井翔一朗}
+
+\maketitle
+\tableofcontents
+
+\section{これは節}
+これは参考文献~\cite{Hubbard.PhysRevLett.3.77}です。
+これは\href{https://dlmf.nist.gov/}{DLMF}のリンクです
+\footnote{
+     これは脚注です。
+}。
+
+\section{これも節}
+けものはいてものけものはいない。
+\begin{align}
+     \int_0^\pi \dd{x} \sin x  \label{sin}
+\end{align}
+これは積分です~\eqref{sin}。
+\begin{figure}[b]
+     \centering
+     \includegraphics[width=0.5\linewidth]{tiger}
+     \caption{トラのやつ}
+\end{figure}
+
+\begin{table}[htb]
+	\centering
+	\begin{tabular}{ccc} \hline
+          col1 & col2 & col3 \\ \hline
+          $a_{11}$ & $a_{12}$ & $a_{13}$ \\
+          $a_{21}$ & $a_{22}$ & $a_{23}$ \\
+          $a_{31}$ & $a_{32}$ & $a_{33}$ \\ \hline
+	\end{tabular}
+	\caption{いい感じの表}
+\end{table}
+
+
+
+\bibliography{sample.bib}
+\bibliographystyle{h-physrev5}
+
+\end{document}
